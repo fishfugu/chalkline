@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Chalkline** was created out of a frustration with the lack of good online replacements for the traditional whiteboard, especially in today's world of remote and hybrid work. The whiteboard has always been a fundamental tool for brainstorming, collaboration, and visual communication, but existing digital alternatives often fall short. They lack the simplicity, ease of use, and collaborative spirit of a traditional whiteboard. 
+**Chalkline** was created out of a frustration with the lack of good online replacements for the traditional whiteboard, especially in today's world of remote and hybrid work. The whiteboard has always been a fundamental tool for brainstorming, collaboration, and visual communication, but existing digital alternatives often fall short. They lack the simplicity, ease of use, and collaborative spirit of a traditional whiteboard.
 
 **Chalkline** aims to solve this problem once and for all by creating a real-time collaborative whiteboard that integrates seamlessly with the tools and platforms professionals already use to get their work done. Our goal is to bring the spontaneity and fluidity of a physical whiteboard into the digital age, enhancing it with the powerful capabilities of modern technology.
 
@@ -39,15 +39,41 @@ We welcome all forms of feedback and contributions! Whether you have an idea for
 
 ## Getting Started
 
-To get started with **Chalkline**, clone the repository and follow the instructions below to set up your development environment:
+To get started with **Chalkline**, follow the steps below to set up your development environment:
 
-```bash
-git clone https://github.com/your-username/chalkline.git
-cd chalkline
-# Follow further setup instructions here
-```
+### Prerequisites
 
-TODO: fill out the setup instructions...
+- Node.js and npm installed
+- Angular CLI installed globally (`npm install -g @angular/cli`)
+
+### Setup Instructions
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/chalkline.git
+   cd chalkline
+   ```
+
+2. **Set Up the Angular Client:**
+
+   ```bash
+   cd client
+   npm install
+   ng serve
+   ```
+
+   The Angular app will be running on `http://localhost:4200`.
+
+3. **Set Up the Node.js Server:**
+
+   ```bash
+   cd server
+   npm install
+   node index.js
+   ```
+
+   The Node.js server will be running on `http://localhost:3000`.
 
 ## License
 
