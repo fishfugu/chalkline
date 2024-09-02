@@ -1,4 +1,4 @@
-// File: server/index.js
+// server/index.js
 
 const express = require("express");
 const cors = require("cors");
@@ -16,6 +16,11 @@ app.use(express.json());
 // Basic endpoint
 app.get("/", (req, res) => {
   res.send("Hello, Chalkline!");
+});
+
+// API endpoint for client-server test
+app.get("/api/test", (req, res) => {
+  res.json({ message: "Hello from the server!" });
 });
 
 // Start server
