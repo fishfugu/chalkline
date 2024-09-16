@@ -1,21 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from './api.service';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
+import { WhiteboardComponent } from './whiteboard/whiteboard.component';  // Correct path
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+@NgModule({
+  declarations: [
+    AppComponent,
+    WhiteboardComponent  // Ensure WhiteboardComponent is declared here
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppComponent implements OnInit {
-  title = 'Chalkline';
-  message!: string;
-
-  constructor(private apiService: ApiService) { }
-
-  ngOnInit() {
-    this.apiService.getTestMessage().subscribe(
-      (response) => this.message = response.message,
-      (error) => console.error('Error fetching message:', error)
-    );
-  }
-}
+export class AppModule { }
